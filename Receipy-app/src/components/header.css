@@ -1,15 +1,77 @@
 .header {
+  width: 100%;
+  padding: 3.5rem 1.5rem;
   text-align: center;
-  padding: 25px;
-  background-color: #ff7f50;
-  color: white;
+  background: linear-gradient(135deg, #ff6b35 0%, #f7931e 50%, #ffb347 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
 }
 
 .header h1 {
-  margin: 0;
-  font-size: 32px;
+  margin: 0 0 0.75rem;
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .header p {
-  margin-top: 8px;
+  margin: 0 auto;
+  max-width: 600px;
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #fff4e6;
+  opacity: 0.95;
+}
+
+@media (max-width: 992px) {
+  .header {
+    padding: 3rem 1.25rem;
+  }
+
+  .header h1 {
+    font-size: 2.4rem;
+  }
+
+  .header p {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 2.5rem 1rem;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .header p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 2rem 0.75rem;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+  }
+
+  .header h1 {
+    font-size: 1.6rem;
+    letter-spacing: 0.5px;
+  }
+
+  .header p {
+    font-size: 0.9rem;
+  }
 }

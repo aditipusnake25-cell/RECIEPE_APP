@@ -1,28 +1,109 @@
 .search-container {
+  width: 100%;
+  max-width: 640px;
+  margin: -28px auto 8px;
+  padding: 0 24px;
   display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin: 30px;
+  align-items: center;
+  gap: 12px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .search-container input {
-  width: 280px;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 16px;
+  flex: 1;
+  min-width: 0;
+  padding: 16px 22px;
+  border: 2px solid #f1e7df;
+  border-radius: 999px;
+  background-color: #ffffff;
+  color: #1e293b;
+  font-family: inherit;
+  font-size: 1rem;
+  box-shadow: 0 8px 24px rgba(255, 107, 53, 0.15);
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-container input::placeholder {
+  color: #94a3b8;
+}
+
+.search-container input:focus {
+  outline: none;
+  border-color: #ff6b35;
+  box-shadow: 0 8px 24px rgba(255, 107, 53, 0.25), 0 0 0 4px rgba(255, 107, 53, 0.15);
 }
 
 .search-container button {
-  padding: 12px 20px;
+  flex-shrink: 0;
+  padding: 16px 32px;
   border: none;
-  border-radius: 6px;
-  background-color: #ff7f50;
-  color: white;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
   cursor: pointer;
-  font-size: 16px;
+  box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+  transition: filter 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
 }
 
 .search-container button:hover {
-  background-color: #e6673e;
+  filter: brightness(1.06);
+  box-shadow: 0 10px 24px rgba(255, 107, 53, 0.45);
+}
+
+.search-container button:active {
+  transform: scale(0.97);
+}
+
+.search-container button:focus-visible {
+  outline: 3px solid rgba(255, 107, 53, 0.4);
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .search-container {
+    max-width: 560px;
+    margin-top: -24px;
+    padding: 0 16px;
+  }
+
+  .search-container input {
+    padding: 14px 20px;
+    font-size: 0.95rem;
+  }
+
+  .search-container button {
+    padding: 14px 26px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-container {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: -20px;
+    padding: 0 14px;
+  }
+
+  .search-container input,
+  .search-container button {
+    width: 100%;
+    padding: 13px 18px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .search-container input,
+  .search-container button {
+    transition: none;
+  }
 }
